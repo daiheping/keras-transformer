@@ -392,7 +392,7 @@ def get_model(token_num,
     return keras.models.Model(inputs=[encoder_input, decoder_input], outputs=dense_layer)
 
 
-def decode(model, tokens, start_token, end_token, pad_token, max_len=None):
+def decode(model, tokens, start_token, end_token, pad_token, max_len=10000):
     """Decode with the given model and input tokens.
 
     :param model: The trained model.
